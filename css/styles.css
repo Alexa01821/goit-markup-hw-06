@@ -12,9 +12,11 @@
   --color-white: #ffffff;
   --color-modal: #fcfcfc;
   --box-shadow-card: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
   --box-shadow-btn: 0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 p,
@@ -204,7 +206,8 @@ body {
   padding: 16px 32px;
   margin: 0 auto;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:is(:hover, :focus) {
@@ -338,7 +341,8 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--color-cloud);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icon {
@@ -398,11 +402,14 @@ body {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
 }
 .footer-container {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.footer-info {
+  margin-right: 120px;
 }
 
 .footer-logo {
@@ -430,6 +437,10 @@ body {
   width: 264px;
 }
 
+.footer-soc {
+  margin-right: 80px;
+}
+
 .footer-soc-title {
   font-weight: 500;
   font-size: 16px;
@@ -441,7 +452,7 @@ body {
 .footer-soc-list {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .footer-soc-item {
@@ -457,7 +468,8 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--color-cloud);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-icon {
@@ -466,6 +478,80 @@ body {
 
 .footer-soc-link:is(:hover, :focus) {
   background-color: var(--color-green);
+}
+
+.footer-subscribe {
+}
+.footer-subscribe-title {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+.footer-subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-subscribe-email {
+  position: relative;
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  padding-left: 16px;
+}
+
+.footer-subscribe-label {
+  position: absolute;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  padding-left: 16px;
+  opacity: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subscribe-email:focus + .footer-subscribe-label,
+.footer-subscribe-email:not(:placeholder-shown)
+  + .footer-subscribe-label {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.footer-subscribe-btn {
+  display: flex;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background-color: var(--color-iris);
+  border-radius: 4px;
+  border: 0;
+  padding: 8px 24px;
+}
+.footer-subscribe-btn-icon {
+  fill: currentColor;
+  margin-left: 16px;
+}
+
+.footer-subscribe-btn:is(:hover, :focus) {
+  background-color: var(--color-ocean);
 }
 /* ---------------------------------PORTFOLIO-------------------------------- */
 .portfolio-title {
@@ -603,7 +689,7 @@ body {
   padding: 24px;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
@@ -622,7 +708,8 @@ body {
   align-items: center;
   margin-left: auto;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: background-color 250ms
+      cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
