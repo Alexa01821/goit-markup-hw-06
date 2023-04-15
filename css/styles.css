@@ -71,6 +71,17 @@ body {
   overflow: hidden;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* ---------------------------------HEADER-------------------------------- */
 .header {
   border-bottom: 1px solid var(--color-cornflower);
@@ -215,10 +226,6 @@ body {
 }
 
 /* ---------------------------------SECTION1 OPTION-------------------------------- */
-.option-title {
-  display: none;
-}
-
 .option-list {
   display: flex;
   gap: 24px;
@@ -480,8 +487,6 @@ body {
   background-color: var(--color-green);
 }
 
-.footer-subscribe {
-}
 .footer-subscribe-title {
   display: block;
   font-weight: 500;
@@ -502,6 +507,8 @@ body {
   width: 264px;
   height: 40px;
   border: 1px solid var(--color-white);
+  outline: transparent;
+  opacity: 0.15;
   border-radius: 4px;
   background-color: transparent;
   font-weight: 400;
@@ -523,6 +530,10 @@ body {
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subscribe-email:focus{
+  opacity: 1;
 }
 
 .footer-subscribe-email:focus + .footer-subscribe-label,
@@ -554,10 +565,6 @@ body {
   background-color: var(--color-ocean);
 }
 /* ---------------------------------PORTFOLIO-------------------------------- */
-.portfolio-title {
-  display: none;
-}
-
 /* ---------------------------------PORTFOLIO FILTERS-------------------------------- */
 .portfolio {
   padding: 96px 0 120px;
@@ -706,7 +713,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
+  margin: 0 0 24px auto;
 
   transition: background-color 250ms
       cubic-bezier(0.4, 0, 0.2, 1),
@@ -716,6 +723,137 @@ body {
 .modal-btn-close:is(:hover, :focus) {
   background-color: var(--color-ocean);
   border: 0px;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--color-navy-blue);
+}
+
+.modal-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--color-light-slate);
+  margin-bottom: 4px;
+}
+
+.modal-wrap {
+  position: relative;
+  margin-bottom: 8px;
+}
+.modal-input {
+  width: 100%;
+  height: 45px;
+  outline: transparent;
+  border: 1px solid var(--color-navy-blue-modal);
+  border-radius: 4px;
+  padding-left: 38px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--color-navy-blue);
+  transition: border-color 250ms
+  cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input-icon {
+  position: absolute;
+  fill: currentColor;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms
+  cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  border-color: var(--color-iris);
+}
+
+.modal-input:focus + .modal-input-icon {
+  fill: var(--color-iris);
+}
+
+.modal-textarea {
+  height: 120px;
+  resize: none;
+  padding: 8px 16px;
+}
+
+.modal-field {
+  display: flex;
+  align-items: center;
+}
+
+.modal-checkbox-wrap {
+  margin: 16px auto 24px;
+}
+
+.modal-check-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid var(--color-navy-blue-modal);
+  border-radius: 2px;
+  fill: transparent;
+
+  transition: border-color 250ms
+      cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox:checked + .modal-check-icon {
+  border-color: transparent;
+  background-color: var(--color-ocean);
+  fill: var(--color-cloud);
+}
+
+.modal-label-check {
+  margin: 0;
+}
+
+.modal-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+  color: var(--color-iris);
+}
+
+.modal-btn {
+  width: 169px;
+  height: 56px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background-color: var(--color-iris);
+  box-shadow: var(--box-shadow-btn);
+  border-radius: 4px;
+  border: 0;
+  padding: 16px 32px;
+  margin: 0 auto;
+
+  transition: background-color 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:is(:hover, :focus) {
+  background-color: var(--color-ocean);
 }
 
 .is-hidden {
